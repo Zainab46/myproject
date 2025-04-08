@@ -21,51 +21,6 @@ const handlesquare=(btnvalue)=>{
 }
 
 
-
-// First, debug what API URL you're using
-console.log("API URL:", api);
-
-const handleEvaluate = async () => {
-  try {
-    if (!expressionInput) {
-      return;
-    }
-    
-    // Replace 'X' with '*' for multiplication
-    const correctedExpression = expressionInput.replace(/X/g, '*');
-    
-    const encodedExpression = encodeURIComponent(correctedExpression);
-    // Log the full URL to check it's correct
-    const fullUrl = `${api}/evaluate?Exp=${encodedExpression}`;
-    console.log("Making request to:", fullUrl);
-    
-    const response = await fetch(fullUrl, {
-      method: 'GET',
-    });
-    
-    if (!response.ok) {
-      console.error(`API error: ${response.status}`);
-      setResultInput(`Error: ${response.status}`);
-      return;
-    }
-    
-    const data = await response.json();
-    console.log("API response:", data);
-    
-    if (data.Result) {
-      setResultInput(data.Result);
-      setLastResult(data.Result);
-    } else if (data.message) {
-      setResultInput(`Error: ${data.message}`);
-    }
-  } catch (error) {
-    console.error(`Error: ${error.message}`);
-    setResultInput(`Error: ${error.message}`);
-  }
-};
-
-
-
 const handlevariables=(variable)=>{
 
 if(shift==true&&variable=='a'){

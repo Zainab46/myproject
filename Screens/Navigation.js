@@ -5,15 +5,12 @@ import Main from './Main';
 import SimpleMode from './SimpleMode';
 import ShiftMode from './ShiftMode';
 import Stat from './SimpleModeScreens.js/Stat';
-import Base_N from './SimpleModeScreens.js/Base_N';
 import Eqn from './SimpleModeScreens.js/Eqn';
 import Matrix from './SimpleModeScreens.js/Matrix';
-import Table from './SimpleModeScreens.js/Table';
 import Vector from './SimpleModeScreens.js/Vector';
 import Fix from './ShiftModeScreens.js/Fix';
 import Norm from './ShiftModeScreens.js/Norm';
 import Sci from './ShiftModeScreens.js/Sci';
-import GraphCalculator from '../Graph';
 import Shifteight from './ShiftModeScreens.js/Shifteight';
 import Shiftseven from './ShiftModeScreens.js/Shiftseven';
 const Stack = createStackNavigator();
@@ -55,13 +52,6 @@ const Navig = () => {
         gestureDirection: 'horizontal-inverted', 
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,}} />
 
-        
-       <Stack.Screen name="Base_N" component={Base_N} 
-        options={{headerStyle:{backgroundColor:'#434547'},
-        headerTitleStyle: { marginLeft:100,color: 'white', fontWeight: 'bold' },
-        headerTintColor: 'white',
-        gestureDirection: 'horizontal-inverted', 
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,}} />
 
         
        <Stack.Screen name="Eqn" component={Eqn} 
@@ -72,13 +62,6 @@ const Navig = () => {
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,}} />
 
 <Stack.Screen name="Matrix" component={Matrix} 
-        options={{headerStyle:{backgroundColor:'#434547'},
-        headerTitleStyle: { marginLeft:100,color: 'white', fontWeight: 'bold' },
-        headerTintColor: 'white',
-        gestureDirection: 'horizontal-inverted', 
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,}} />
-
-<Stack.Screen name="Table" component={Table} 
         options={{headerStyle:{backgroundColor:'#434547'},
         headerTitleStyle: { marginLeft:100,color: 'white', fontWeight: 'bold' },
         headerTintColor: 'white',
@@ -115,12 +98,7 @@ const Navig = () => {
         gestureDirection: 'horizontal-inverted', 
         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,}} />
 
-<Stack.Screen name="Graph" component={GraphCalculator} 
-        options={{headerStyle:{backgroundColor:'#434547'},
-        headerTitleStyle: { marginLeft:100,color: 'white', fontWeight: 'bold' },
-        headerTintColor: 'white',
-        gestureDirection: 'horizontal-inverted', 
-        cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,}} />    
+
 
 
         

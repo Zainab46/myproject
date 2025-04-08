@@ -1,1 +1,0 @@
-export const api='http://192.168.27.162:5000/api'
